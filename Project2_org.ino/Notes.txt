@@ -1,0 +1,12 @@
+ MISSING = pinMode(2, INPUT); // NO change
+ DIfference: 
+	using 0&1 as LOW or HIGH // no difference
+	Within else statement: 
+		digitalWrite (4, HIGH); //red
+		digitalWrite (5, HIGH); //red
+			// cause one light on at all time , only one light blink instead ON alternatively 
+***	On else statement: 
+	else (switchState == 1);	//extra statement (ended the statment)
+		//cause the two red light on even when switch is not on and green doesn't come on as it end the the else statment so the code run on after if and directly follow the after else in a loop.
+		// and the green doesn't come on in if as the swich over is so fast it either couldn't detect by eye or board to notice.  
+		//If the a delay statement is put after else (line17) and before the orginal 18. G (1), R (0), R (0) -> G (0), R (1), R (0) -> G (0), R (0), R (1) loop can be seen.
